@@ -1,1 +1,1 @@
-# boardgamecatalyst
+# BGC
