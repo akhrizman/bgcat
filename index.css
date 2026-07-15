@@ -11,6 +11,10 @@ body{
     background:white;
 }
 
+.section-text {
+    text-align: justify;
+}
+
 img{
     max-width:100%;
     display:block;
@@ -43,7 +47,6 @@ h2{
 p{
     margin-bottom:18px;
     font-size: 1.2rem;
-    text-align: justify;
 }
 
 .hero{
