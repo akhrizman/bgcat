@@ -1,7 +1,22 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+:root{
+    --nav-height:64px;
+    --nav-bg:rgba(255, 107, 0, .90);  /* logo lite orange */
+    /*--nav-bg:rgba(254, 92, 2, .90);   !* logo dark orange *!*/
+    --nav-text:rgba(36, 85, 0);  /* logo dark green */
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -9,10 +24,6 @@ body{
     line-height:1.5;
     color:#333;
     background:white;
-}
-
-.section-text {
-    text-align: justify;
 }
 
 img{
@@ -27,6 +38,7 @@ a{
 
 section{
     padding:40px 16px;
+    scroll-margin-top:calc(var(--nav-height) + 16px);
 }
 
 .container{
@@ -34,23 +46,98 @@ section{
     margin:auto;
 }
 
+.section-text{
+    text-align:justify;
+}
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
 h1,h2{
     font-weight:300;
     letter-spacing:1px;
+    color:orange;
+
 }
 
 h2{
     margin-bottom:25px;
     font-size:2rem;
+    color: rgba(254, 92, 2);
 }
 
 p{
     margin-bottom:18px;
-    font-size: 1.2rem;
+    font-size:1.2rem;
 }
 
+.offer-title {
+    color:var(--nav-text)
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:var(--nav-bg);
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+    z-index:1000;
+    backdrop-filter:blur(8px);
+}
+.nav-container{
+    max-width:1100px;
+    margin:auto;
+    height:var(--nav-height);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+}
+
+.nav-logo{
+    color:var(--nav-text);
+    font-weight:bold;
+    font-size:1.3rem;
+}
+
+.nav-menu{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-menu a{
+    color:var(--nav-text);
+    font-weight:bold;
+    font-size:1.2rem;
+    transition:.2s;
+}
+
+.nav-menu a:hover{
+    opacity:.7;
+}
+
+.nav-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:var(--nav-text);
+    font-size:2rem;
+    cursor:pointer;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
 .hero{
-    padding:80px 24px 60px;
+    padding:calc(var(--nav-height) + 20px) 24px 40px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -68,17 +155,17 @@ p{
     margin:0 auto 35px;
 }
 
-.hero{
-    padding:20px 24px 40px;
-}
-
 .hero-logo{
     display:block;
-    width:100%;
-    max-width:700px;
+    width:70%;
+    max-width:none;
     height:auto;
     margin:0 auto 30px;
 }
+
+/* ===========================
+   BUTTONS
+=========================== */
 
 .button{
     display:inline-block;
@@ -93,8 +180,23 @@ p{
     color:white;
 }
 
+/* ===========================
+   SECTIONS
+=========================== */
+
 #about{
     background:#fafafa;
+}
+
+#clients ul{
+    margin:0 0 18px 1.5rem;
+    padding:0;
+    font-size:1.2rem;      /* Match paragraph size */
+    line-height:1.5;        /* Match body line spacing */
+}
+
+#clients li{
+    margin-bottom:0.4rem;
 }
 
 .cards{
@@ -138,14 +240,76 @@ footer{
     font-size:.9rem;
 }
 
+/* ===========================
+   MOBILE NAV
+=========================== */
+
+@media (max-width:699px){
+
+    .nav-toggle{
+        display:block;
+    }
+
+    .nav-menu{
+        position:absolute;
+        top:var(--nav-height);
+        left:0;
+        width:100%;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:0;
+
+        background:var(--nav-bg);
+        backdrop-filter:blur(6px);
+
+        max-height:0;
+        overflow:hidden;
+
+        transition:max-height .3s ease;
+    }
+
+    .nav-menu.active{
+        max-height:400px;
+    }
+
+    .nav-menu li{
+        width:100%;
+    }
+
+    .nav-menu a{
+        display:block;
+        width:100%;
+        padding:8px;
+        text-align:center;
+    }
+}
+
+/* ===========================
+   DESKTOP
+=========================== */
 @media (min-width:700px){
 
-.hero h1{
-    font-size:4.5rem;
-}
+    .hero h1{
+        font-size:4.5rem;
+    }
 
-.photo-grid{
-    grid-template-columns:repeat(3,1fr);
-}
+    .hero-logo{
+        width:50%;
+    }
+
+    .photo-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    #clients ul{
+        columns:2;
+        column-gap:3rem;
+    }
+
+    #clients li{
+        break-inside:avoid;
+    }
 
 }
