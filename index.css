@@ -219,11 +219,6 @@ p{
     grid-template-columns:1fr;
 }
 
-/*.photo{*/
-/*    background: #ddd;*/
-/*    height: 250px;*/
-/*}*/
-
 .photo{
     aspect-ratio:4/3;
     background:#efefef;
