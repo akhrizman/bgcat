@@ -67,6 +67,10 @@ h2{
     color: rgba(254, 92, 2);
 }
 
+h3{
+    font-size:1.4rem;
+}
+
 p{
     margin-bottom:18px;
     font-size:1.2rem;
@@ -74,6 +78,7 @@ p{
 
 .offer-title {
     color:var(--nav-text)
+
 }
 
 /* ===========================
