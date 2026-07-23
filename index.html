@@ -10,6 +10,7 @@
           content="The Board Game Catalyst brings modern board games to libraries, senior communities, summer camps, offices, cafés, schools, and organizations throughout New Jersey.">
 
     <link rel="stylesheet" href="index.css">
+    <script src="https://www.staticforms.dev/scripts/staticforms.js" defer></script>
 
 </head>
 
@@ -325,43 +326,91 @@
 
 </section>
 
-<section id="contact">
 
+<section id="contact">
     <div class="container">
 
-        <h2>Contact</h2>
+        <h2>Contact Us</h2>
 
-        <p>
-            Interested in bringing a board game event to your organization or social group?
-        </p>
+        <form
+                action="https://api.staticforms.dev/submit"
+                method="POST">
 
-        <p>
-            Whether you're planning a one-time event or looking for recurring
-            programming, we'd love to help. Shoot us an email with your
-            <strong>Name</strong>,
-            <strong>Phone Number</strong>, and a
-            <strong>Brief Description</strong> of your group (name, location, group size, age range, general interests
-            etc.) and we'll reach out.
-        </p>
+            <input
+                    type="hidden"
+                    name="apiKey"
+                    value="sf_0abf43c424f022346f3fb8dc">
 
-        <p>
+            <div class="form-group">
+                <label for="full_name">Full Name</label>
+                <input
+                        type="text"
+                        id="full_name"
+                        name="full_name"
+                        required>
+            </div>
 
-            <strong>Email:</strong><br>
-            <a href="mailto:boardgamecatalyst@gmail.com">
-                boardgamecatalyst@gmail.com
-            </a>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required>
+            </div>
 
-        </p>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone">
+            </div>
 
-        <p>
+            <div class="form-group checkbox-group">
+                <label>
+                    <input
+                            type="checkbox"
+                            name="text_ok"
+                            value="Yes">
+                    Can we text this number?
+                </label>
+            </div>
 
-            <strong>Serving Central New Jersey and surrounding areas.</strong>
+            <div class="form-group">
+                <label for="message">How can we help?</label>
 
-        </p>
+                <p class="field-help">
+                    What type of offering(s) interest you? Please describe your group's age range and interests.
+                    When are you looking to have this event? Will it be a one-off or a recurring (weekly/monthly/etc.) program?
+                    Please provide as much information as possible.
+                </p>
+
+                <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="referral">How did you learn about us?</label>
+                <input
+                        type="text"
+                        id="referral"
+                        name="referral"
+                        placeholder="Google, Facebook, Library, Friend, etc.">
+            </div>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
 
     </div>
-
 </section>
+
 
 <footer>
 
@@ -389,3 +438,10 @@
 
 </body>
 </html>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    StaticForms.attach(document.querySelector('form'));
+  });
+</script>
