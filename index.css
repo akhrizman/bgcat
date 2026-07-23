@@ -257,7 +257,7 @@ footer{
    MOBILE NAV
 =========================== */
 
-@media (max-width:699px){
+@media (max-width:749px){
 
     .nav-toggle{
         display:block;
@@ -302,7 +302,7 @@ footer{
 /* ===========================
    DESKTOP
 =========================== */
-@media (min-width:700px){
+@media (min-width:750px){
 
     .hero h1{
         font-size:4.5rem;
@@ -345,7 +345,7 @@ footer{
     text-align: left;
     margin-bottom: 6px;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .form-group input,
@@ -367,6 +367,8 @@ footer{
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
+    margin-top: 0.3rem;
+    font-size: 1.1rem;
 }
 
 .checkbox-group input[type="checkbox"] {
@@ -376,11 +378,11 @@ footer{
 
 .field-help {
     margin: 4px 0 10px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: normal;
     color: #666;
     line-height: 1.4;
-    text-align: left;
+    text-align: justify;
 }
 
 #contact button {
@@ -393,7 +395,7 @@ footer{
     color: var(--nav-text);
     background: var(--nav-bg);
 
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
 
     transition: .25s;
