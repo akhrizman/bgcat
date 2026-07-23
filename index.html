@@ -299,21 +299,25 @@
                      alt="Office Event">
             </div>
 
-
             <div class="photo">
                 <img src="https://drive.google.com/thumbnail?id=103kkNyfwR-KCV07XWILLkQdVLEDWkUvi&sz=w1000"
                      alt="Learn & Play">
             </div>
 
-<!--            <div class="photo">-->
-<!--                <img src="https://drive.google.com/thumbnail?id=ID_PLACEHOLDER&sz=w1000"-->
-<!--                     alt="Learn & Play">-->
-<!--            </div>-->
+            <div class="photo">
+                <img src="https://drive.google.com/thumbnail?id=1DLCXtYj0CUb9SnNt25JDVyuxjaXyh4yY&sz=w1000"
+                     alt="Kids Game - Kung Fu Panda">
+            </div>
 
-<!--            <div class="photo">-->
-<!--                <img src="https://drive.google.com/thumbnail?id=ID_PLACEHOLDER&sz=w1000"-->
-<!--                     alt="Learn & Play">-->
-<!--            </div>-->
+            <div class="photo">
+                <img src="https://drive.google.com/thumbnail?id=1sE1wKtrH3ryd5zNUvNnf3vXpCxh8nm-s&sz=w1000"
+                     alt="Kids Game - T2R 1st Journey">
+            </div>
+
+            <div class="photo">
+                <img src="https://drive.google.com/thumbnail?id=1qbiHnEORiECOhxN94IV760EnSRKQA8RD&sz=w1000"
+                     alt="Library Board Game Club">
+            </div>
 
 <!--            <div class="photo">-->
 <!--                <img src="https://drive.google.com/thumbnail?id=ID_PLACEHOLDER&sz=w1000"-->
@@ -333,6 +337,7 @@
         <h2>Contact Us</h2>
 
         <form
+                id="contact-form"
                 action="https://api.staticforms.dev/submit"
                 method="POST">
 
@@ -408,6 +413,22 @@
 
         </form>
 
+        <div id="form-success" class="success-message" hidden>
+            <h3>Thanks for reaching out!</h3>
+
+            <p>
+                Your message has been sent to The Board Game Catalyst.
+            </p>
+
+            <p>
+                We'll review your information and get back to you as soon as possible.
+            </p>
+
+            <a href="#" class="button">
+                Back to Home
+            </a>
+        </div>
+
     </div>
 </section>
 
@@ -441,7 +462,23 @@
 
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    StaticForms.attach(document.querySelector('form'));
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("contact-form");
+    const success = document.getElementById("form-success");
+
+    StaticForms.attach(form, {
+      onSuccess: function () {
+
+        form.style.display = "none";
+
+        success.hidden = false;
+
+        document.getElementById("contact").scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+
   });
 </script>
