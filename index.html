@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
-    <title>The Board Game Catalyst</title>
+    <title>Board Game Events & Clubs in Monmouth County, NJ | Board Game Catalyst</title>
 
     <meta name="description"
-          content="The Board Game Catalyst brings modern board games to libraries, senior communities, summer camps, offices, cafés, schools, and organizations throughout New Jersey.">
+          content="Board Game Catalyst brings engaging board game events, game nights, family activities, and board game clubs to libraries, schools, businesses, community organizations, and families throughout Monmouth County and Central New Jersey.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://boardgamecatalyst.com/">
+
+    <meta property="og:title" content="Board Game Events & Clubs in Central New Jersey | Board Game Catalyst">
+    <meta property="og:description" content="Modern board game events, game nights, family activities, and clubs for libraries, schools, businesses, and community organizations in Monmouth County and Central New Jersey.">
+    <meta property="og:url" content="https://boardgamecatalyst.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://boardgamecatalyst.com/bgc-large.png">
 
     <link rel="stylesheet" href="index.css">
     <script src="https://www.staticforms.dev/scripts/staticforms.js" defer></script>
+    <script src="js/index.js" defer></script>
 
 </head>
 
@@ -30,12 +41,12 @@
         </button>
 
         <ul class="nav-menu" id="navMenu">
+            <li><a href="#programs">Programs</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#clients">Organizations</a></li>
+<!--            <li><a href="#clients">Organizations</a></li>-->
             <li><a href="#offerings">Offerings</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#photos">Past Events</a></li>
-<!--            <li><a href="#contact">Contact</a></li>-->
         </ul>
 
     </div>
@@ -45,17 +56,12 @@
 <section class="hero">
 
     <div class="container">
-
-        <!--<h1>The Board Game Catalyst</h1>-->
-
         <img
                 src="images/bgc-large.png"
                 alt="The Board Game Catalyst"
                 class="hero-logo">
 
-        <p class="hero-tagline">
-        Bringing people together through tabletop gaming.
-        </p>
+        <h1 class="hero-tagline">Bringing people together through tabletop gaming.</h1>
 
         <a class="button" href="#contact">
             Book an Event
@@ -66,9 +72,88 @@
 </section>
 
 
+<section class="section-text" id="programs">
+
+    <div class="container">
+        <h2>Board Game Programming</h2>
+
+        <p>
+            The Board Game Catalyst brings modern board games and professionally hosted
+            game experiences to libraries, schools, businesses, community centers,
+            senior living communities, camps, clubs, and private groups throughout
+            Monmouth County and Central New Jersey.
+        </p>
+
+        <h3>Libraries & Community Organizations</h3>
+        <p>
+            Give your patrons a fun, social, screen-free activity with a hosted
+            board game night or recurring board game club.
+        </p>
+
+        <h3>Schools, PTO, & PTA</h3>
+        <p>
+            Bring a fun, social, and screen-free activity to your school community.
+            The Board Game Catalyst can provide board game events and programs for schools,
+            PTOs, and PTAs, giving students and families an engaging way to connect,
+            play, and discover modern board games together.
+        </p>
+
+        <h3>Summer Camps & After-School Programs</h3>
+        <p>
+            Give kids an engaging alternative to screens with board games that
+            encourage strategy, problem-solving, communication, and social interaction.
+            The Board Game Catalyst can provide board game activities for summer camps,
+            after-school programs, and other youth organizations,
+            with games selected to fit every age group and group size.
+        </p>
+
+
+        <h3>Families & Community Events</h3>
+        <p>
+            Add a memorable family activity to your next community event with
+            approachable modern board games for kids, parents, and mixed-age groups.
+        </p>
+
+        <h3>Businesses & Teams</h3>
+        <p>
+            Bring employees together with a relaxed, screen-free game night designed
+            for socializing, teamwork, and fun.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="section-text" id="clients">
+
+    <div class="container">
+
+        <h2>Organizations We Work With</h2>
+        <ul>
+            <li>Libraries</li>
+            <li>County Park Systems</li>
+            <li>Summer Camps</li>
+            <li>Senior Centers</li>
+            <li>Community Centers</li>
+            <li>Schools</li>
+            <li>Coffee Shops & Cafés</li>
+            <li>Bars, Pubs</li>
+            <li>Breweries</li>
+            <li>Social Clubs</li>
+            <li>Rehab Centers</li>
+            <li>Offices & Businesses</li>
+            <li>Religious Groups</li>
+            <li>Private Groups</li>
+        </ul>
+
+    </div>
+
+</section>
+
 <section class="section-text" id="about">
 
     <div class="container">
+
         <h2>About Us</h2>
 
         <p>
@@ -100,33 +185,6 @@
     </div>
 
 </section>
-
-
-<section class="section-text" id="clients">
-
-    <div class="container">
-
-        <h2>Organizations We Work With</h2>
-        <ul>
-            <li>Libraries</li>
-            <li>County Park Systems</li>
-            <li>Summer Camps</li>
-            <li>Senior Centers</li>
-            <li>Community Centers</li>
-            <li>Schools</li>
-            <li>Coffee Shops & Cafés</li>
-            <li>Bars & Pubs</li>
-            <li>Rehab Centers</li>
-            <li>Social Clubs</li>
-            <li>Offices</li>
-            <li>Religious Groups</li>
-            <li>Private Groups</li>
-        </ul>
-
-    </div>
-
-</section>
-
 
 <section class="section-text" id="offerings">
 
@@ -443,27 +501,8 @@
 
 <footer> © 2026 The Board Game Catalyst </footer>
 
-<script>
-
-  const toggle = document.getElementById("navToggle");
-  const menu = document.getElementById("navMenu");
-
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
-
-  // Close menu after clicking a link
-  document.querySelectorAll(".nav-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("active");
-    });
-  });
-
-</script>
-
 </body>
 </html>
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
